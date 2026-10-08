@@ -1,0 +1,47 @@
+# NOS-TLPlot
+
+> NOS-TLPlot is a free, open-source Python tool that visualizes Newcastle–Ottawa Scale (NOS)
+> risk-of-bias assessments as publication-ready traffic-light plots and 12 specialized
+> visualizations for systematic reviews and meta-analyses.
+
+## Key facts
+
+- [Homepage](https://nos-tlplot.github.io/): overview, NOS data template downloads, all 12 plot types.
+- [Web app (Streamlit)](https://nos-tlplot.streamlit.app): run the tool in the browser, upload CSV/Excel, export figures.
+- [Source code (GitHub)](https://github.com/aurumz-rgb/NOS-TLPlot): install with pip, command-line usage.
+- [Archived release (Zenodo)](https://doi.org/10.5281/zenodo.17065214): citable software archive.
+- [Software metapaper (JORS)](https://doi.org/10.5334/jors.635): peer-reviewed methods description.
+- License: Apache-2.0. Free to use, no account required.
+- Author: Vihaan Sahu
+
+## What it does
+
+- Converts NOS star ratings (0–9) into Low / Moderate / High risk-of-bias categories
+  (7–9 Low, 4–6 Moderate, 0–3 High) following Newcastle–Ottawa Scale standards for
+  cohort, case-control and cross-sectional designs.
+- Generates 12 visualization types: traffic-light bubble plot, radar chart, thematic radar
+  chart, heatmap, dot profile, donut chart, lollipop chart, stacked area chart, pie chart,
+  line ordered plot, table view, and star distribution plot.
+- Exports publication-ready figures in .png, .pdf, .svg and .eps (300 DPI, vector output)
+  with traffic-light or grayscale themes.
+- Usable as an interactive web app or as a command-line / Python script for batch processing.
+
+## Input data
+
+CSV or Excel files following the NOS-TLPlot template. CSV and Excel templates are available
+on the homepage. Headers are case-sensitive and include: Author, Year; Representativeness;
+Non-exposed Selection; Exposure Ascertainment; Outcome Absent at Start; Comparability
+(Age/Gender); Comparability (Other); Outcome Assessment; Follow-up Length; Follow-up
+Adequacy; Total Score; Overall RoB.
+
+Limitation: radar plots (domain-based and thematic) and the dot profile plot are not
+generated when the dataset contains more than five studies.
+
+## Citation
+
+Sahu, V. (2026). NOS-TLPlot: A Specialized Python Tool for Visualizing Newcastle–Ottawa Scale
+Risk-of-Bias Assessments. Journal of Open Research Software, 14(1), 7.
+https://doi.org/10.5334/jors.635
+
+Software release: Sahu, V. (2025). NOS-TLPlot (v2.0.3). Zenodo.
+https://doi.org/10.5281/zenodo.17065214
