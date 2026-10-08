@@ -2,9 +2,12 @@
 
 Open-source Python tool for visualising **Newcastle–Ottawa Scale (NOS) risk-of-bias** assessments as publication-ready traffic-light plots and 10+ specialized figures.
 
-🌐 **Web app:** [nos-tlplot.github.io](https://nos-tlplot.github.io)
+🌐 **Web:** [nos-tlplot.github.io](https://nos-tlplot.github.io)
 
-📂 **Zenodo:** [10.5281/zenodo.17065214](https://doi.org/10.5281/zenodo.17065214) · 📃 **Metapaper (JORS):** [10.5334/jors.635](https://doi.org/10.5334/jors.635)
+📂 **Zenodo:** [10.5281/zenodo.17065214](https://doi.org/10.5281/zenodo.17065214) 
+
+📃 **Metapaper (JORS):** [10.5334/jors.635](https://doi.org/10.5334/jors.635)
+
 
 ## Quick start
 
@@ -33,7 +36,11 @@ Upload a CSV/Excel NOS table (see [example/](example)), pick a plot type and the
 | `Total Score` | 0–9 |
 | `Overall RoB` | Low / Moderate / High |
 
-Stars → RoB: 7–9 Low · 4–6 Moderate · 0–3 High.
+Stars → RoB: 
+
+7–9 Low 
+4–6 Moderate 
+0–3 High.
 
 ## Citation
 
@@ -41,4 +48,7 @@ Stars → RoB: 7–9 Low · 4–6 Moderate · 0–3 High.
 
 **Sahu, V. (2026).** NOS-TLPlot: A Specialized Python Tool for Visualizing Newcastle–Ottawa Scale Risk-of-Bias Assessments. *Journal of Open Research Software*, 14(1), 7. [10.5334/jors.635](https://doi.org/10.5334/jors.635)
 
-Apache-2.0 · Support: [Issues](https://github.com/aurumz-rgb/NOS-TLPlot/issues) · pteroisvolitans12@gmail.com
+Apache-2.0 
+
+
+Support: [Issues](https://github.com/aurumz-rgb/NOS-TLPlot/issues) 
