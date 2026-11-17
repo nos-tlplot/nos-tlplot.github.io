@@ -21,7 +21,7 @@
   cohort, case-control and cross-sectional designs.
 - Generates 12 visualization types: traffic-light bubble plot, radar chart, thematic radar
   chart, heatmap, dot profile, donut chart, lollipop chart, stacked area chart, pie chart,
-  line ordered plot, table view, and star distribution plot.
+  line ordered plot, table view, and NOS visualization plot.
 - Exports publication-ready figures in .png, .pdf, .svg and .eps (300 DPI, vector output)
   with traffic-light or grayscale themes.
 - Usable as an interactive web app or as a command-line / Python script for batch processing.

@@ -67,9 +67,9 @@
       <image:caption>Table view of Newcastle-Ottawa Scale domain and total scores for each study.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://nos-tlplot.github.io/example/NOS_star.png</image:loc>
-      <image:title>Newcastle-Ottawa Scale star distribution plot</image:title>
-      <image:caption>Star distribution plot of NOS star ratings per study, available in the traffic-light theme.</image:caption>
+      <image:loc>https://nos-tlplot.github.io/example/nos_plot.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) visualization plot</image:title>
+      <image:caption>Item-level NOS visualization plot showing domain judgements, star totals and overall risk of bias for each study.</image:caption>
     </image:image>
   </url>
 </urlset>
