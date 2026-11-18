@@ -2,25 +2,64 @@
   const slides = Array.from(track.children);
   const prevButton = document.querySelector('.carousel-arrow.prev');
   const nextButton = document.querySelector('.carousel-arrow.next');
-  
-  let index = 0;
+
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+  firstClone.setAttribute('aria-hidden', 'true');
+  lastClone.setAttribute('aria-hidden', 'true');
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, slides[0]);
+
+  let index = 1;
+  let timer = null;
+
+  function setTransform(animate) {
+    track.style.transition = animate ? 'transform 0.5s ease-in-out' : 'none';
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  track.addEventListener('transitionend', () => {
+    if (index === 0) {
+      index = slides.length;
+      setTransform(false);
+    } else if (index === slides.length + 1) {
+      index = 1;
+      setTransform(false);
+    }
+  });
 
   function moveCarousel(direction) {
-    if (direction === 'next') {
-      index++;
-      if (index >= slides.length) index = 0;
-    } else {
-      index--;
-      if (index < 0) index = slides.length - 1;
+    if (index === 0) {
+      index = slides.length;
+      setTransform(false);
+    } else if (index === slides.length + 1) {
+      index = 1;
+      setTransform(false);
     }
-    track.style.transform = `translateX(-${index * (100 / slides.length)}%)`;
+    index = direction === 'next' ? index + 1 : index - 1;
+    setTransform(true);
+    restartTimer();
+  }
+
+  function startTimer() {
+    if (!timer) timer = setInterval(() => moveCarousel('next'), 8000);
+  }
+  function stopTimer() {
+    clearInterval(timer);
+    timer = null;
+  }
+  function restartTimer() {
+    stopTimer();
+    startTimer();
   }
 
   prevButton.addEventListener('click', () => moveCarousel('prev'));
   nextButton.addEventListener('click', () => moveCarousel('next'));
+  document.querySelector('.carousel').addEventListener('mouseenter', stopTimer);
+  document.querySelector('.carousel').addEventListener('mouseleave', startTimer);
 
-
-  setInterval(() => moveCarousel('next'), 10000);
+  setTransform(false);
+  startTimer();
 
   const citations = {
     apa: "Sahu, V. (2026). NOS-TLPlot: A Specialized Python Tool for Visualizing Newcastle–Ottawa Scale Risk-of-Bias Assessments. Journal of Open Research Software, 14(1), 7. https://doi.org/10.5334/jors.635",
@@ -40,41 +79,42 @@
   });
 
   function copyCitation() {
-    navigator.clipboard.writeText(citationText.innerText).then(() => {
-   
+    const text = citationText.innerText;
+    const showCopied = () => {
+      const copyBtn = document.querySelector('.citation-select-container button');
       const notification = document.createElement('div');
+      notification.className = 'citation-copied';
       notification.textContent = "Citation copied to clipboard!";
-      notification.style.position = 'fixed';
-      notification.style.bottom = '20px';
-      notification.style.right = '20px';
-      notification.style.backgroundColor = 'var(--primary-medium)';
-      notification.style.color = 'white';
-      notification.style.padding = '12px 20px';
-      notification.style.borderRadius = '8px';
-      notification.style.boxShadow = 'var(--shadow-md)';
-      notification.style.zIndex = '1000';
-      notification.style.fontWeight = '500';
-      notification.style.opacity = '0';
-      notification.style.transform = 'translateY(20px)';
-      notification.style.transition = 'all 0.3s ease';
-      
-      document.body.appendChild(notification);
-      
-
+      copyBtn.appendChild(notification);
+      requestAnimationFrame(() => notification.classList.add('show'));
       setTimeout(() => {
-        notification.style.opacity = '1';
-        notification.style.transform = 'translateY(0)';
-      }, 10);
-      
-      
+        notification.classList.remove('show');
+      }, 2500);
       setTimeout(() => {
-        notification.style.opacity = '0';
-        notification.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          document.body.removeChild(notification);
-        }, 300);
-      }, 3000);
-    });
+        notification.remove();
+      }, 2900);
+    };
+    const fallbackCopy = () => {
+      const helper = document.createElement('textarea');
+      helper.value = text;
+      helper.style.position = 'fixed';
+      helper.style.opacity = '0';
+      document.body.appendChild(helper);
+      helper.select();
+      try {
+        document.execCommand('copy');
+      } catch (err) {}
+      document.body.removeChild(helper);
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(showCopied).catch(() => {
+        fallbackCopy();
+        showCopied();
+      });
+    } else {
+      fallbackCopy();
+      showCopied();
+    }
   }
   
 

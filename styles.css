@@ -227,20 +227,19 @@
       overflow: hidden;
       border-radius: 16px;
       background: var(--bg-white);
-      box-shadow: var(--shadow-lg);
       height: 550px;
     }
     
     .carousel-track {
       display: flex;
-      width: 1200%;
+      width: 100%;
       transition: transform 0.5s ease-in-out;
       height: 100%;
     }
     
     .carousel-track img {
-      width: 8.333333%;
-      flex-shrink: 0;
+      width: 100%;
+      flex: 0 0 100%;
       display: block;
       height: 100%;
       object-fit: contain;
@@ -733,4 +732,52 @@
       .viz-grid {
         grid-template-columns: 1fr;
       }
+    }
+    .carousel {
+      box-shadow: none;
+      outline: none;
+    }
+    
+    .carousel-track img {
+      box-shadow: none;
+      outline: none;
+    }
+    
+    .carousel-arrow:focus {
+      outline: none;
+    }
+    
+    .carousel-arrow:focus-visible {
+      outline: 2px solid #ffffff;
+    }
+    
+    .citation-select-container {
+      position: relative;
+    }
+    
+    .citation-select-container button {
+      position: relative;
+    }
+    
+    .citation-copied {
+      position: absolute;
+      left: 50%;
+      top: -46px;
+      transform: translateX(-50%);
+      background: var(--primary-medium);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 500;
+      pointer-events: none;
+    }
+    
+    .citation-copied.show {
+      opacity: 1;
     }
