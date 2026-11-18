@@ -32,9 +32,14 @@
       <image:caption>Heatmap of Newcastle-Ottawa Scale risk of bias across domains and studies.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_item_heatmap.png</image:loc>
+      <image:title>NOS item-level star heatmap by domain</image:title>
+      <image:caption>Item-level heatmap of Newcastle-Ottawa Scale star ratings grouped into domains.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://nos-tlplot.github.io/example/output_dot_profile.png</image:loc>
-      <image:title>NOS domain score profiles by study</image:title>
-      <image:caption>Dot profile plot of Newcastle-Ottawa Scale domain scores per study.</image:caption>
+      <image:title>NOS domain stars by study (stacked)</image:title>
+      <image:caption>Stacked domain stars per study from the Newcastle-Ottawa Scale.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://nos-tlplot.github.io/example/output_lollipop.png</image:loc>
@@ -58,8 +63,8 @@
     </image:image>
     <image:image>
       <image:loc>https://nos-tlplot.github.io/example/output_line_ordered.png</image:loc>
-      <image:title>NOS domain scores ordered by total score</image:title>
-      <image:caption>Line ordered plot of Newcastle-Ottawa Scale domain scores ranked by total star score.</image:caption>
+      <image:title>NOS star ratings matrix by study</image:title>
+      <image:caption>Item-level star matrix of Newcastle-Ottawa Scale ratings ordered by total score.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://nos-tlplot.github.io/example/output_table.png</image:loc>

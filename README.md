@@ -1,6 +1,6 @@
 # NOS-TLPlot
 
-Open-source Python tool for visualising **Newcastle–Ottawa Scale (NOS) risk-of-bias** assessments as publication-ready traffic-light plots and 10+ specialized figures.
+Open-source Python tool for visualising **Newcastle–Ottawa Scale (NOS) risk-of-bias** assessments as publication-ready traffic-light plots and 13 specialized figures.
 
 🌐 **Web:** [nos-tlplot.github.io](https://nos-tlplot.github.io)
 
@@ -24,7 +24,7 @@ python3 nos_tlplot.py sample.csv output.png gray
 
 Upload a CSV/Excel NOS table (see [example/](example)), pick a plot type and theme, and export as `.png`, `.pdf`, `.svg`, or `.eps`.
 
-**Features:** 12 plot types · traffic-light, grayscale, ocean and sage themes · CSV/Excel input · 300 DPI vector output.
+**Features:** 13 plot types · traffic-light, grayscale, ocean and sage themes · CSV/Excel input · 300 DPI vector output.
 
 ## Themes
 
@@ -59,7 +59,7 @@ Stars → RoB:
 
 ## Citation
 
-**Sahu, V. (2025).** NOS-TLPlot: Visualization Tool for Newcastle–Ottawa Scale in Meta-Analysis (v2.0.3). Zenodo. [10.5281/zenodo.17065214](https://doi.org/10.5281/zenodo.17065214)
+**Sahu, V. (2025).** NOS-TLPlot: Visualization Tool for Newcastle–Ottawa Scale in Meta-Analysis (v3.0.0). Zenodo. [10.5281/zenodo.17065214](https://doi.org/10.5281/zenodo.17065214)
 
 **Sahu, V. (2026).** NOS-TLPlot: A Specialized Python Tool for Visualizing Newcastle–Ottawa Scale Risk-of-Bias Assessments. *Journal of Open Research Software*, 14(1), 7. [10.5334/jors.635](https://doi.org/10.5334/jors.635)
 
