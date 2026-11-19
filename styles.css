@@ -182,7 +182,7 @@
     }
     
     .redirect a {
-      background: linear-gradient(135deg, var(--primary-medium), var(--primary-accent));
+      background: linear-gradient(135deg, #3B4650, #232A31);
       color: white;
       padding: 1rem 2.5rem;
       font-size: 1.2rem;
@@ -214,13 +214,13 @@
     }
     
     .redirect a:hover { 
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+      background: linear-gradient(135deg, #46525E, #2C343C);
       transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
     }
     
     .redirect a.secondary {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+      background: linear-gradient(135deg, #46525E, #2C343C);
     }
     
     .redirect a.secondary:hover {
@@ -385,7 +385,7 @@
     }
     
     .citation-select-container button {
-      background: linear-gradient(135deg, var(--primary-medium), var(--primary-accent));
+      background: linear-gradient(135deg, #3B4650, #232A31);
       color: white;
       border: none;
       cursor: pointer;
@@ -393,7 +393,7 @@
     }
     
     .citation-select-container button:hover {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+      background: linear-gradient(135deg, #46525E, #2C343C);
     }
     
     footer {
@@ -508,7 +508,7 @@
     }
     
     .template-buttons a {
-      background: linear-gradient(135deg, var(--primary-medium), var(--primary-accent));
+      background: linear-gradient(135deg, #3B4650, #232A31);
       color: white;
       padding: 10px 18px;
       border-radius: 25px;
@@ -521,7 +521,7 @@
     }
     
     .template-buttons a:hover {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+      background: linear-gradient(135deg, #46525E, #2C343C);
       transform: translateY(-3px);
       box-shadow: var(--shadow-md);
     }
@@ -533,7 +533,7 @@
     }
     
     .citation-download button {
-      background: linear-gradient(135deg, var(--primary-medium), var(--primary-accent));
+      background: linear-gradient(135deg, #3B4650, #232A31);
       color: white;
       border: none;
       padding: 0.6rem 1.2rem;
@@ -546,7 +546,7 @@
     }
     
     .citation-download button:hover {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+      background: linear-gradient(135deg, #46525E, #2C343C);
       transform: translateY(-3px);
       box-shadow: var(--shadow-md);
     }
@@ -927,31 +927,15 @@
       max-height: 88vh;
     }
 
-    /* arrows live above the figure, never covering it */
-    .carousel-nav {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-    
     .carousel-arrow,
     .carousel-arrow.prev,
     .carousel-arrow.next {
-      position: static;
-      transform: none;
-      left: auto;
-      right: auto;
-      top: auto;
-      width: 44px;
-      height: 38px;
+      background-color: rgba(38, 46, 54, 0.82);
       border-radius: 10px;
-      background-color: rgba(45, 74, 61, 0.85);
-      font-size: 16px;
     }
     
     .carousel-arrow:hover {
-      background-color: rgba(45, 74, 61, 1);
+      background-color: rgba(38, 46, 54, 0.96);
     }
 
     /* extra responsiveness */
@@ -1033,26 +1017,13 @@
       background: rgba(255, 255, 255, 0.28);
     }
 
-    @media (min-width: 1100px) {
-      .carousel-nav {
-        display: none;
-      }
-      
-      .carousel-arrow,
-      .carousel-arrow.prev,
-      .carousel-arrow.next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: auto;
-        right: auto;
-      }
-      
-      .carousel-arrow.prev {
-        left: -64px;
-      }
-      
-      .carousel-arrow.next {
-        right: -64px;
-      }
+    .carousel-arrow,
+    .carousel-arrow.prev,
+    .carousel-arrow.next {
+      background-color: rgba(38, 46, 54, 0.82);
+      border-radius: 10px;
+    }
+    
+    .carousel-arrow:hover {
+      background-color: rgba(38, 46, 54, 0.96);
     }
