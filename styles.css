@@ -371,7 +371,6 @@
     .citation-select-container button {
        font-size: 0.9rem;        
        padding: 0.5rem 1rem;  
-       margin-right: 0.5rem;
        min-width: 200px;       
        border-radius: 8px;     
        border: 1px solid #ddd;
@@ -761,6 +760,13 @@
     
     .citation-select-container {
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .citation-select-container select {
+      flex: 1 1 220px;
     }
     
     .citation-select-container button {
@@ -772,7 +778,7 @@
       left: calc(100% + 12px);
       top: 50%;
       transform: translateY(-50%);
-      background: var(--primary-medium);
+      background: #3B4650;
       color: white;
       padding: 10px 16px;
       border-radius: 8px;
@@ -940,22 +946,18 @@
 
     /* extra responsiveness */
     @media (max-width: 900px) {
-      .citation-select-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      
-      .citation-select-container select {
-        flex: 1 1 220px;
-      }
-      
       .plot-lightbox-toolbar {
         flex-wrap: wrap;
       }
       
       .plot-lightbox-title {
         white-space: normal;
+      }
+      
+      .citation-copied {
+        left: 50%;
+        top: -46px;
+        transform: translateX(-50%);
       }
     }
     
