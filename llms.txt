@@ -37,6 +37,16 @@ Adequacy; Total Score; Overall RoB.
 Limitation: radar plots (domain-based and thematic) are not generated when the
 dataset contains more than five studies.
 
+
+## Pages
+
+- [Homepage](https://nos-tlplot.github.io/): overview and figure gallery.
+- [About](https://nos-tlplot.github.io/about.html): what NOS-TLPlot is and who it is for.
+- [Visualization Types](https://nos-tlplot.github.io/visualization-types.html): all 13 plot types with previews.
+- [Input Data](https://nos-tlplot.github.io/input-data.html): CSV/Excel format and templates.
+- [Citation](https://nos-tlplot.github.io/citation.html): how to cite NOS-TLPlot.
+- [Support](https://nos-tlplot.github.io/support.html): GitHub issues and contact email.
+
 ## Citation
 
 Sahu, V. (2026). NOS-TLPlot: A Specialized Python Tool for Visualizing Newcastle–Ottawa Scale

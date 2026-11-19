@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOS-TLPlot: Visualization Types</title>
+  <meta name="description" content="All 13 Newcastle-Ottawa Scale visualization types in NOS-TLPlot: bubble plot, radars, heatmaps, stacked stars, star matrix, table and more.">
+  <link rel="canonical" href="https://nos-tlplot.github.io/visualization-types.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NOS-TLPlot">
+  <meta property="og:title" content="NOS-TLPlot: Visualization Types">
+  <meta property="og:description" content="All 13 Newcastle-Ottawa Scale visualization types in NOS-TLPlot: bubble plot, radars, heatmaps, stacked stars, star matrix, table and more.">
+  <meta property="og:url" content="https://nos-tlplot.github.io/visualization-types.html">
+  <meta property="og:image" content="https://nos-tlplot.github.io/example/output_radar.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOS-TLPlot: Visualization Types">
+  <meta name="twitter:description" content="All 13 Newcastle-Ottawa Scale visualization types in NOS-TLPlot: bubble plot, radars, heatmaps, stacked stars, star matrix, table and more.">
+  <link rel="icon" href="assets/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="assets/favicon-96x96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="assets/favicon-180x180.png" type="image/png" sizes="180x180">
+  <link rel="apple-touch-icon" href="assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://img.shields.io" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=3.0.2">
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="assets/logo.svg" alt="NOS-TLPlot Logo" class="logo-image">
+  </div>
+  <h1 style="margin-top: 15px;">NOS-TLPlot</h1>
+  <p>Newcastle-Ottawa Scale Traffic Light Visualization Tool for Systematic Reviews.</p>
+  <nav class="page-nav" aria-label="Pages">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="visualization-types.html" class="active">Visualization Types</a>
+    <a href="input-data.html">Input Data</a>
+    <a href="citation.html">Citation</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="section-header">
+      <h2>Visualization Types</h2>
+      <div class="viz-grid">
+        <div class="viz-item" data-img="example/output.png" data-title="NOS Risk Assessment Bubble Chart" role="button" tabindex="0">1. Traffic-Light Bubble Plot</div>
+        <div class="viz-item" data-img="example/output_radar.png" data-title="NOS Domain Scores Radar Chart" role="button" tabindex="0">2. Domain Radar Chart</div>
+        <div class="viz-item" data-img="example/output_theme_radar.png" data-title="NOS Theme-based Radar Chart" role="button" tabindex="0">3. Theme Radar Chart</div>
+        <div class="viz-item" data-img="example/output_heatmap.png" data-title="NOS Risk of Bias by Domain" role="button" tabindex="0">4. Domain Heatmap</div>
+        <div class="viz-item" data-img="example/output_item_heatmap.png" data-title="NOS Item Heatmap by Domain" role="button" tabindex="0">5. Item-Level Star Heatmap</div>
+        <div class="viz-item" data-img="example/output_dot_profile.png" data-title="NOS Domain Stars by Study" role="button" tabindex="0">6. Stacked Domain Stars</div>
+        <div class="viz-item" data-img="example/output_table.png" data-title="NOS Scores by Study" role="button" tabindex="0">7. Score Table</div>
+        <div class="viz-item" data-img="example/output_donut.png" data-title="NOS Risk Distribution by Domain" role="button" tabindex="0">8. Risk Donut Chart</div>
+        <div class="viz-item" data-img="example/output_line_ordered.png" data-title="NOS Star Ratings by Study" role="button" tabindex="0">9. Star Ratings Matrix</div>
+        <div class="viz-item" data-img="example/output_lollipop.png" data-title="NOS Total Scores by Study" role="button" tabindex="0">10. Total Score Lollipop</div>
+        <div class="viz-item" data-img="example/output_pie.png" data-title="NOS Overall Risk Distribution" role="button" tabindex="0">11. Overall Risk Pie</div>
+        <div class="viz-item" data-img="example/output_stacked_area.png" data-title="NOS Risk Distribution (Stacked Area)" role="button" tabindex="0">12. Stacked Area Risk Chart</div>
+        <div class="viz-item" data-img="example/nos_plot.png" data-title="NOS Visualization Plot" role="button" tabindex="0">13. NOS Visualization Grid</div>
+      
+      </div>
+      <p style="margin-top: 1.5rem; color: var(--text-secondary); font-style: italic;">
+        Note: Radar plots (both thematic and domain-based) will not be generated if the number of studies exceeds 5.
+      </p>
+    </section>
+
+    <div class="plot-lightbox" id="plotLightbox" aria-hidden="true">
+      <div class="plot-lightbox-toolbar">
+        <span class="plot-lightbox-title" id="lbTitle"></span>
+        <div class="plot-lightbox-controls">
+          <button id="lbZoomOut" title="Zoom out" type="button">&minus;</button>
+          <span id="lbZoomLevel" aria-live="polite">100%</span>
+          <button id="lbZoomIn" title="Zoom in" type="button">+</button>
+          <a id="lbDownload" title="Download" download>&#11015;</a>
+          <button id="lbFullscreen" title="Maximize" type="button">&#9974;</button>
+          <button id="lbClose" title="Close" type="button">&#10005;</button>
+        </div>
+      </div>
+      <div class="plot-lightbox-canvas" id="lbCanvas">
+        <img id="lbImage" src="" alt="">
+      </div>
+    </div>
+
+  </div>
+</main>
+<footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p>© 2025–2026 Vihaan Sahu</p>
+        <p>Apache 2.0 License</p>
+      </div>
+      <div class="footer-center">
+        <p>NOS-TLPlot</p>
+      </div>
+      <div class="footer-right">
+        <p><a href="https://aurumz-rgb.github.io" target="_blank">Made with 💛 by VS.</a></p>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js?v=3.0.2"></script>
+</body>
+</html>

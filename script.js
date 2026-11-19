@@ -1,7 +1,8 @@
   const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
+  const slides = track ? Array.from(track.children) : [];
   const prevButton = document.querySelector('.carousel-arrow.prev');
   const nextButton = document.querySelector('.carousel-arrow.next');
+  if (track) {
 
   const firstClone = slides[0].cloneNode(true);
   const lastClone = slides[slides.length - 1].cloneNode(true);
@@ -52,14 +53,14 @@
     stopTimer();
     startTimer();
   }
+    prevButton.addEventListener('click', () => moveCarousel('prev'));
+    nextButton.addEventListener('click', () => moveCarousel('next'));
+    document.querySelector('.carousel').addEventListener('mouseenter', stopTimer);
+    document.querySelector('.carousel').addEventListener('mouseleave', startTimer);
 
-  prevButton.addEventListener('click', () => moveCarousel('prev'));
-  nextButton.addEventListener('click', () => moveCarousel('next'));
-  document.querySelector('.carousel').addEventListener('mouseenter', stopTimer);
-  document.querySelector('.carousel').addEventListener('mouseleave', startTimer);
-
-  setTransform(false);
-  startTimer();
+    setTransform(false);
+    startTimer();
+  }
 
   const citations = {
     apa: "Sahu, V. (2026). NOS-TLPlot: A Specialized Python Tool for Visualizing Newcastle–Ottawa Scale Risk-of-Bias Assessments. Journal of Open Research Software, 14(1), 7. https://doi.org/10.5334/jors.635",
@@ -73,7 +74,7 @@
   const citationSelect = document.getElementById("citationType");
   const citationText = document.getElementById("citationText");
 
-  citationSelect.addEventListener("change", () => {
+  if (citationSelect) citationSelect.addEventListener("change", () => {
     const selected = citationSelect.value;
     citationText.innerHTML = "<em>" + citations[selected] + "</em>";
   });
@@ -159,6 +160,7 @@ ER  - `;
     URL.revokeObjectURL(url);
   }
 
+  if (document.getElementById('plotLightbox')) {
   /* ---------- plot lightbox (zoom / download / fullscreen / close) ---------- */
 
   const lightbox = document.getElementById('plotLightbox');
@@ -255,3 +257,5 @@ ER  - `;
   document.querySelectorAll('.carousel-track img').forEach(img => {
     img.addEventListener('click', () => openLightbox(img.src, img.alt, img.alt));
   });
+
+  }

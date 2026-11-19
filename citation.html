@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOS-TLPlot: Citation</title>
+  <meta name="description" content="How to cite NOS-TLPlot: software metapaper, Zenodo archive, RIS and BibTeX downloads.">
+  <link rel="canonical" href="https://nos-tlplot.github.io/citation.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NOS-TLPlot">
+  <meta property="og:title" content="NOS-TLPlot: Citation">
+  <meta property="og:description" content="How to cite NOS-TLPlot: software metapaper, Zenodo archive, RIS and BibTeX downloads.">
+  <meta property="og:url" content="https://nos-tlplot.github.io/citation.html">
+  <meta property="og:image" content="https://nos-tlplot.github.io/example/output_table.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOS-TLPlot: Citation">
+  <meta name="twitter:description" content="How to cite NOS-TLPlot: software metapaper, Zenodo archive, RIS and BibTeX downloads.">
+  <link rel="icon" href="assets/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="assets/favicon-96x96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="assets/favicon-180x180.png" type="image/png" sizes="180x180">
+  <link rel="apple-touch-icon" href="assets/favicon-180x180.png">
+  <link rel="preconnect" href="https://img.shields.io" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=3.0.2">
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="assets/logo.svg" alt="NOS-TLPlot Logo" class="logo-image">
+  </div>
+  <h1 style="margin-top: 15px;">NOS-TLPlot</h1>
+  <p>Newcastle-Ottawa Scale Traffic Light Visualization Tool for Systematic Reviews.</p>
+  <nav class="page-nav" aria-label="Pages">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="visualization-types.html">Visualization Types</a>
+    <a href="input-data.html">Input Data</a>
+    <a href="citation.html" class="active">Citation</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="citation section-header">
+      <h2>Citation</h2>
+     
+      <p style="margin-bottom: 1.5rem;">If you use NOS-TLPlot in your research, please cite the Software article:</p>
+
+  
+      <div class="citation-select-container" style="margin-bottom: 1.5rem;">
+        <select id="citationType" aria-label="Citation format">
+          <option value="apa">APA</option>
+          <option value="vancouver">Vancouver</option>
+          <option value="chicago">Chicago</option>
+          <option value="harvard">Harvard</option>
+          <option value="mla">MLA</option>
+          <option value="ieee">IEEE</option>
+        </select>
+        <button onclick="copyCitation()">Copy</button>
+      </div>
+
+      <p id="citationText"><em>Sahu, V. (2026). NOS-TLPlot: A Specialized Python Tool for Visualizing Newcastle–Ottawa Scale Risk-of-Bias Assessments. <em>Journal of Open Research Software</em>, 14(1), 7. https://doi.org/10.5334/jors.635</em></p>
+      
+      <div class="citation-download">
+        <button onclick="downloadCitation('ris')">Download RIS</button>
+        <button onclick="downloadCitation('bibtex')">Download BibTeX</button>
+      </div>
+
+      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+        <i class="fa-solid fa-archive"></i> <strong>Note:</strong> The software's code is also available as a citable, archivable artifact on Zenodo: <a href="https://doi.org/10.5281/zenodo.17065214" target="_blank" style="color: var(--primary-medium);">https://doi.org/10.5281/zenodo.17065214</a>
+      </p>
+    </section>
+
+    <div class="plot-lightbox" id="plotLightbox" aria-hidden="true">
+      <div class="plot-lightbox-toolbar">
+        <span class="plot-lightbox-title" id="lbTitle"></span>
+        <div class="plot-lightbox-controls">
+          <button id="lbZoomOut" title="Zoom out" type="button">&minus;</button>
+          <span id="lbZoomLevel" aria-live="polite">100%</span>
+          <button id="lbZoomIn" title="Zoom in" type="button">+</button>
+          <a id="lbDownload" title="Download" download>&#11015;</a>
+          <button id="lbFullscreen" title="Maximize" type="button">&#9974;</button>
+          <button id="lbClose" title="Close" type="button">&#10005;</button>
+        </div>
+      </div>
+      <div class="plot-lightbox-canvas" id="lbCanvas">
+        <img id="lbImage" src="" alt="">
+      </div>
+    </div>
+
+  </div>
+</main>
+<footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p>© 2025–2026 Vihaan Sahu</p>
+        <p>Apache 2.0 License</p>
+      </div>
+      <div class="footer-center">
+        <p>NOS-TLPlot</p>
+      </div>
+      <div class="footer-right">
+        <p><a href="https://aurumz-rgb.github.io" target="_blank">Made with 💛 by VS.</a></p>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js?v=3.0.2"></script>
+</body>
+</html>
