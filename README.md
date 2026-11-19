@@ -22,7 +22,7 @@ python3 nos_tlplot.py sample.csv output.png
 python3 nos_tlplot.py sample.csv output.png gray
 ```
 
-Upload a CSV/Excel NOS table (see [example/](example)), pick a plot type and theme, and export as `.png`, `.pdf`, `.svg`, or `.eps`.
+Upload a CSV/Excel NOS table (see [example/](example)), pick a plot type and theme, and export as `.png`, `.pdf`, `.svg`, or `.tiff`.
 
 **Features:** 13 plot types · traffic-light, grayscale, ocean and sage themes · CSV/Excel input · 300 DPI vector output.
 
