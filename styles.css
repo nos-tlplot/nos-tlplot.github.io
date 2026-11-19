@@ -341,14 +341,14 @@
       color: var(--text-secondary);
     }
     
-    .support a {
+    .support p a {
       color: var(--primary-medium);
       text-decoration: none;
       font-weight: 500;
       position: relative;
     }
-    
-    .support a::after {
+
+    .support p a::after {
       content: '';
       position: absolute;
       bottom: -2px;
@@ -358,12 +358,12 @@
       background-color: var(--primary-medium);
       transition: width 0.3s ease;
     }
-    
-    .support a:hover { 
+
+    .support p a:hover {
       text-decoration: none;
     }
-    
-    .support a:hover::after {
+
+    .support p a:hover::after {
       width: 100%;
     }
     
@@ -775,9 +775,8 @@
     
     .citation-copied {
       position: absolute;
-      left: calc(100% + 12px);
-      top: 50%;
-      transform: translateY(-50%);
+      right: 0;
+      bottom: calc(100% + 10px);
       background: #3B4650;
       color: white;
       padding: 10px 16px;
@@ -939,27 +938,13 @@
       .plot-lightbox-toolbar {
         flex-wrap: wrap;
       }
-      
+
       .plot-lightbox-title {
         white-space: normal;
       }
-      
-      .citation-copied {
-        left: 50%;
-        top: -46px;
-        transform: translateX(-50%);
-      }
     }
-    
+
     @media (max-width: 700px) {
-      .citation-copied {
-        left: 50%;
-        top: -46px;
-        transform: translateX(-50%);
-        font-size: 0.8rem;
-        padding: 8px 12px;
-      }
-      
       .carousel {
         height: 380px;
       }

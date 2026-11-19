@@ -123,6 +123,71 @@
     <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Risk Assessment Bubble Chart</image:title>
+      <image:caption>Traffic-light bubble plot of Newcastle-Ottawa Scale domain scores and overall risk per study.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_radar.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Domain Scores Radar Chart</image:title>
+      <image:caption>Radar chart of Newcastle-Ottawa Scale domain scores per study.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_theme_radar.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Theme-based Radar Chart</image:title>
+      <image:caption>Theme-based radar chart of Newcastle-Ottawa Scale domain scores per study.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_heatmap.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Risk of Bias by Domain</image:title>
+      <image:caption>Heatmap of Newcastle-Ottawa Scale risk of bias across domains and studies.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_item_heatmap.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Item Heatmap by Domain</image:title>
+      <image:caption>Item-level heatmap of Newcastle-Ottawa Scale star ratings grouped into domain bands.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_dot_profile.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Domain Stars by Study</image:title>
+      <image:caption>Stacked domain stars per study from the Newcastle-Ottawa Scale.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_table.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Scores by Study</image:title>
+      <image:caption>Summary table of Newcastle-Ottawa Scale domain stars, total scores and overall risk.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_donut.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Risk Distribution by Domain</image:title>
+      <image:caption>Donut chart showing proportions of Newcastle-Ottawa Scale risk categories by domain.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_line_ordered.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Star Ratings by Study</image:title>
+      <image:caption>Item-level star ratings matrix of Newcastle-Ottawa Scale studies ordered by total score.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_lollipop.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Total Scores by Study</image:title>
+      <image:caption>Lollipop chart comparing total Newcastle-Ottawa Scale star scores across studies.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_pie.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Overall Risk Distribution</image:title>
+      <image:caption>Pie chart of the overall Newcastle-Ottawa Scale risk-of-bias distribution.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/output_stacked_area.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Risk Distribution (Stacked Area)</image:title>
+      <image:caption>Stacked area chart of Newcastle-Ottawa Scale risk distribution across domains.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/nos_plot.png</image:loc>
+      <image:title>Newcastle-Ottawa Scale (NOS) Visualization Plot</image:title>
+      <image:caption>Item-level traffic-light grid with domain bands, star totals and overall judgement.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://nos-tlplot.github.io/input-data.html</loc>
