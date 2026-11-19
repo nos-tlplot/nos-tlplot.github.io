@@ -33,7 +33,7 @@ Four colour themes: `traffic_light` (default), `gray`, `ocean` and `sage` - sele
 | Theme | Low | Moderate | High |
 | ----- | --- | -------- | ---- |
 | `traffic_light` | `#2E7D32` | `#F9A825` | `#C62828` |
-| `gray` | `#C7D5E2` | `#8B98A1` | `#5F6770` |
+| `gray` | `#D6D6D6` | `#9E9E9E` | `#3C3C3C` |
 | `ocean` | `#6BAED6` | `#2171B5` | `#08306B` |
 | `sage` | `#63BF93` | `#5B6D80` | `#FF884D` |
 
