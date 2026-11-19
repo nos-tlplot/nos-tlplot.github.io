@@ -341,8 +341,13 @@
     </section>
 
 
-    <section class="carousel">
-      <button class="carousel-arrow prev" aria-label="Previous visualization" type="button">&#10094;</button>
+    <section class="carousel-section">
+      <div class="carousel-wrapper">
+      <div class="carousel-nav">
+        <button class="carousel-arrow prev" aria-label="Previous visualization" type="button">&#10094;</button>
+        <button class="carousel-arrow next" aria-label="Next visualization" type="button">&#10095;</button>
+      </div>
+      <div class="carousel">
       <div class="carousel-track">
         <img src="example/nos_plot.png" alt="Newcastle-Ottawa Scale (NOS) visualization plot" fetchpriority="high" decoding="async">
         <img src="example/output.png" alt="Newcastle-Ottawa Scale bubble plot visualization" decoding="async">
@@ -358,7 +363,8 @@
         <img src="example/output_item_heatmap.png" alt="Item-level NOS star heatmap by domain" decoding="async">
         <img src="example/output_table.png" alt="NOS scores by study table" decoding="async">
       </div>
-      <button class="carousel-arrow next" aria-label="Next visualization" type="button">&#10095;</button>
+      </div>
+      </div>
     </section>
 
   <section class="redirect">
@@ -384,19 +390,19 @@
     <section class="section-header">
       <h2>Visualization Types</h2>
       <div class="viz-grid">
-        <div class="viz-item">1. Traffic-light Plot</div>
-        <div class="viz-item">2. Radar Chart</div>
-        <div class="viz-item">3. Heatmap</div>
-        <div class="viz-item">4. Dot Profile (stacked stars)</div>
-        <div class="viz-item">5. Donut Chart</div>
-        <div class="viz-item">6. Lollipop Plot</div>
-        <div class="viz-item">7. Stacked Area Chart</div>
-        <div class="viz-item">8. Pie Chart</div>
-        <div class="viz-item">9. Star Ratings Matrix</div>
-        <div class="viz-item">10. Item Heatmap</div>
-        <div class="viz-item">11. Table View</div>
-        <div class="viz-item">12. Thematic Radar</div>
-        <div class="viz-item">13. NOS Visualization Plot</div>
+        <div class="viz-item" data-img="example/output.png" data-title="NOS Risk Assessment Bubble Chart" role="button" tabindex="0">1. Traffic-light Plot</div>
+        <div class="viz-item" data-img="example/output_radar.png" data-title="NOS Domain Scores Radar Chart" role="button" tabindex="0">2. Radar Chart</div>
+        <div class="viz-item" data-img="example/output_heatmap.png" data-title="NOS Risk of Bias by Domain" role="button" tabindex="0">3. Heatmap</div>
+        <div class="viz-item" data-img="example/output_dot_profile.png" data-title="NOS Domain Stars by Study" role="button" tabindex="0">4. Dot Profile (stacked stars)</div>
+        <div class="viz-item" data-img="example/output_donut.png" data-title="NOS Risk Distribution by Domain" role="button" tabindex="0">5. Donut Chart</div>
+        <div class="viz-item" data-img="example/output_lollipop.png" data-title="NOS Total Scores by Study" role="button" tabindex="0">6. Lollipop Plot</div>
+        <div class="viz-item" data-img="example/output_stacked_area.png" data-title="NOS Risk Distribution (Stacked Area)" role="button" tabindex="0">7. Stacked Area Chart</div>
+        <div class="viz-item" data-img="example/output_pie.png" data-title="NOS Overall Risk Distribution" role="button" tabindex="0">8. Pie Chart</div>
+        <div class="viz-item" data-img="example/output_line_ordered.png" data-title="NOS Star Ratings by Study" role="button" tabindex="0">9. Star Ratings Matrix</div>
+        <div class="viz-item" data-img="example/output_item_heatmap.png" data-title="NOS Item Heatmap by Domain" role="button" tabindex="0">10. Item Heatmap</div>
+        <div class="viz-item" data-img="example/output_table.png" data-title="NOS Scores by Study" role="button" tabindex="0">11. Table View</div>
+        <div class="viz-item" data-img="example/output_theme_radar.png" data-title="NOS Theme-based Radar Chart" role="button" tabindex="0">12. Thematic Radar</div>
+        <div class="viz-item" data-img="example/nos_plot.png" data-title="NOS Visualization Plot" role="button" tabindex="0">13. NOS Visualization Plot</div>
       </div>
       <p style="margin-top: 1.5rem; color: var(--text-secondary); font-style: italic;">
         Note: Radar plots (both thematic and domain-based) will not be generated if the number of studies exceeds 5.
@@ -571,6 +577,24 @@
       </div>
     </div>
   </footer>
+
+
+    <div class="plot-lightbox" id="plotLightbox" aria-hidden="true">
+      <div class="plot-lightbox-toolbar">
+        <span class="plot-lightbox-title" id="lbTitle"></span>
+        <div class="plot-lightbox-controls">
+          <button id="lbZoomOut" title="Zoom out" type="button">&minus;</button>
+          <span id="lbZoomLevel" aria-live="polite">100%</span>
+          <button id="lbZoomIn" title="Zoom in" type="button">+</button>
+          <a id="lbDownload" title="Download" download>&#11015;</a>
+          <button id="lbFullscreen" title="Maximize" type="button">&#9974;</button>
+          <button id="lbClose" title="Close" type="button">&#10005;</button>
+        </div>
+      </div>
+      <div class="plot-lightbox-canvas" id="lbCanvas">
+        <img id="lbImage" src="" alt="">
+      </div>
+    </div>
 
 <script src="script.js?v=3.0.1"></script>
 

@@ -158,3 +158,100 @@ ER  - `;
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   }
+
+  /* ---------- plot lightbox (zoom / download / fullscreen / close) ---------- */
+
+  const lightbox = document.getElementById('plotLightbox');
+  const lbImage = document.getElementById('lbImage');
+  const lbTitle = document.getElementById('lbTitle');
+  const lbCanvas = document.getElementById('lbCanvas');
+  const lbZoomLevel = document.getElementById('lbZoomLevel');
+  const lbDownload = document.getElementById('lbDownload');
+  const lbFullscreen = document.getElementById('lbFullscreen');
+
+  let lbScale = 1;
+
+  function applyLbZoom() {
+    lbImage.style.transform = `scale(${lbScale})`;
+    lbZoomLevel.textContent = Math.round(lbScale * 100) + '%';
+  }
+
+  function openLightbox(src, alt, title) {
+    lbImage.src = src;
+    lbImage.alt = alt || '';
+    lbTitle.textContent = title || alt || 'NOS-TLPlot figure';
+    lbDownload.href = src;
+    lbDownload.setAttribute('download', src.split('/').pop());
+    lbScale = 1;
+    applyLbZoom();
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    stopTimer();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+    if (!timer) startTimer();
+  }
+
+  document.getElementById('lbZoomIn').addEventListener('click', () => {
+    lbScale = Math.min(5, lbScale * 1.25);
+    applyLbZoom();
+  });
+
+  document.getElementById('lbZoomOut').addEventListener('click', () => {
+    lbScale = Math.max(0.2, lbScale / 1.25);
+    applyLbZoom();
+  });
+
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+
+  lbFullscreen.addEventListener('click', () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    } else {
+      lightbox.requestFullscreen().catch(() => {});
+    }
+  });
+
+  document.addEventListener('fullscreenchange', () => {
+    lbFullscreen.innerHTML = document.fullscreenElement ? '&#x29C9;&#xFE0E;' : '&#9974;';
+    lbFullscreen.title = document.fullscreenElement ? 'Minimize' : 'Maximize';
+  });
+
+  lbCanvas.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    lbScale = Math.min(5, Math.max(0.2, lbScale * (e.deltaY < 0 ? 1.15 : 1 / 1.15)));
+    applyLbZoom();
+  }, { passive: false });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === '+') { lbScale = Math.min(5, lbScale * 1.25); applyLbZoom(); }
+    if (e.key === '-') { lbScale = Math.max(0.2, lbScale / 1.25); applyLbZoom(); }
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lbCanvas) closeLightbox();
+  });
+
+  document.querySelectorAll('.viz-item[data-img]').forEach(item => {
+    item.addEventListener('click', () => openLightbox(item.dataset.img, item.dataset.title, item.dataset.title));
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(item.dataset.img, item.dataset.title, item.dataset.title);
+      }
+    });
+  });
+
+  document.querySelectorAll('.carousel-track img').forEach(img => {
+    img.addEventListener('click', () => openLightbox(img.src, img.alt, img.alt));
+  });
