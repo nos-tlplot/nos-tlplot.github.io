@@ -34,8 +34,8 @@ Non-exposed Selection; Exposure Ascertainment; Outcome Absent at Start; Comparab
 (Age/Gender); Comparability (Other); Outcome Assessment; Follow-up Length; Follow-up
 Adequacy; Total Score; Overall RoB.
 
-Limitation: radar plots (domain-based and thematic) and the dot profile plot are not
-generated when the dataset contains more than five studies.
+Limitation: radar plots (domain-based and thematic) are not generated when the
+dataset contains more than five studies.
 
 ## Citation
 
