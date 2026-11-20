@@ -47,16 +47,16 @@ Four colour themes: `traffic_light` (default), `gray`, `ocean` and `sage` - sele
 | Column | Range |
 | --- | --- |
 | `Author, Year` | text |
-| Domains 1–4, 7–9 | 0–1 |
-| Comparability (Age/Gender, Other) | 0–2 |
-| `Total Score` | 0–9 |
+| Domains 1 to 4, 7 to 9 | 0 to 1 |
+| Comparability (Age/Gender, Other) | 0 to 2 |
+| `Total Score` | 0 to 9 |
 | `Overall RoB` | Low / Moderate / High |
 
 Stars → RoB: 
 
-7–9 Low 
-4–6 Moderate 
-0–3 High.
+7 to 9 Low 
+4 to 6 Moderate 
+0 to 3 High.
 
 ## Citation
 

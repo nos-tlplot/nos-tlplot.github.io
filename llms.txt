@@ -18,8 +18,8 @@
 
 ## What it does
 
-- Converts NOS star ratings (0–9) into Low / Moderate / High risk-of-bias categories
-  (7–9 Low, 4–6 Moderate, 0–3 High) following Newcastle–Ottawa Scale standards for
+- Converts NOS star ratings (0 to 9) into Low / Moderate / High risk-of-bias categories
+  (7 to 9 Low, 4 to 6 Moderate, 0 to 3 High) following Newcastle–Ottawa Scale standards for
   cohort, case-control and cross-sectional designs.
 - Generates 13 visualization types: traffic-light bubble plot, radar chart, thematic radar
   chart, heatmap, item heatmap, dot profile, donut chart, lollipop chart, stacked area chart, pie chart,
