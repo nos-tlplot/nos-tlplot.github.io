@@ -113,6 +113,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://nos-tlplot.github.io/packages.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nos-tlplot.github.io/example/nos_plot.png</image:loc>
+      <image:title>NOS-TLPlot packages: Python (PyPI) and R (nos.tlplotR)</image:title>
+      <image:caption>Install the nos-tlplot Python package or the nos.tlplotR R package for Newcastle-Ottawa Scale risk-of-bias plots.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://nos-tlplot.github.io/about.html</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
