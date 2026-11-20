@@ -9,8 +9,8 @@
 - [Homepage](https://nos-tlplot.github.io/): overview, NOS data template downloads, all 13 plot types.
 - [Web app (Streamlit)](https://nos-tlplot.streamlit.app): run the tool in the browser, upload CSV/Excel, export figures.
 - [Source code (GitHub)](https://github.com/aurumz-rgb/NOS-TLPlot): install with pip, command-line usage.
-- [Python package (PyPI)](https://pypi.org/project/nos-tlplot/): pip install nos-tlplot — the plotting engine with a CLI.
-- [R package (nos.tlplotR)](https://nos-tlplot.github.io/nos.tlplotR/): remotes::install_github("nos-tlplot/nos.tlplotR") — same plots from R; [packages guide](https://nos-tlplot.github.io/packages.html).
+- [Python package (PyPI)](https://pypi.org/project/nos-tlplot/): pip install nos-tlplot for the plotting engine with a CLI.
+- [R package (nos.tlplotR)](https://nos-tlplot.github.io/nos.tlplotR/): remotes::install_github("nos-tlplot/nos.tlplotR") for the same plots from R; [packages guide](https://nos-tlplot.github.io/packages.html).
 - [Archived release (Zenodo)](https://doi.org/10.5281/zenodo.17065214): citable software archive.
 - [Software metapaper (JORS)](https://doi.org/10.5334/jors.635): peer-reviewed methods description.
 - License: Apache-2.0. Free to use, no account required.

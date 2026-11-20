@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=3.0.2">
+  <link rel="stylesheet" href="styles.css?v=3.0.4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -101,23 +101,26 @@
   <div class="container">
 
     <section class="section-header">
-      <h1>NOS-TLPlot Packages</h1>
-      <p>NOS-TLPlot ships as two installable packages — the <strong>Python package</strong> on PyPI and the
+      <h2>Packages</h2>
+      <p>NOS-TLPlot ships as two installable packages, the <strong>Python package</strong> on PyPI and the
       <strong>nos.tlplotR R package</strong>. Both drive the same plotting engine, so the figures come out
       identical: publication-ready, 300 DPI, in png, pdf, svg and tiff.</p>
     </section>
 
     <section class="section-header">
-      <h2><i class="fa-brands fa-python"></i> Python package — <code>nos-tlplot</code></h2>
+      <div class="pkg-head">
+        <div class="pkg-emblem python"><i class="fa-brands fa-python"></i></div>
+        <h2>Python package: <code>nos-tlplot</code></h2>
+      </div>
       <p>The original engine. Every visualization, the four colour themes and the batch command line,
       installable from <a href="https://pypi.org/project/nos-tlplot/" target="_blank">PyPI</a>.</p>
 
-      <div class="feature-card">
+      <div class="pkg-card">
         <h3>Install</h3>
         <pre><code>pip install nos-tlplot</code></pre>
       </div>
 
-      <div class="feature-card">
+      <div class="pkg-card">
         <h3>Use in two lines</h3>
         <pre><code>import nos_tlplot
 
@@ -128,38 +131,41 @@ nos_tlplot.plot_nos_visualization(df, "nos_plot.png")</code></pre>
         <pre><code>nos-tlplot my_nos_data.csv nos_plot.png</code></pre>
       </div>
 
-      <p>
-        <a class="redirect-link" href="https://pypi.org/project/nos-tlplot/" target="_blank"><i class="fa-brands fa-python"></i> PyPI page</a> ·
-        <a class="redirect-link" href="https://github.com/nos-tlplot/NOS-TLPlot-Package" target="_blank"><i class="fa-brands fa-github"></i> package repository</a> ·
-        <a class="redirect-link" href="index.html"><i class="fa-solid fa-chart-column"></i> all visualizations</a>
-      </p>
+      <div class="pkg-links">
+        <a href="https://pypi.org/project/nos-tlplot/" target="_blank"><i class="fa-brands fa-python"></i> PyPI page</a>
+        <a href="https://github.com/nos-tlplot/NOS-TLPlot-Package" target="_blank"><i class="fa-brands fa-github"></i> Package repository</a>
+        <a href="index.html"><i class="fa-solid fa-chart-column"></i> All visualizations</a>
+      </div>
     </section>
 
     <section class="section-header">
-      <h2><i class="fa-brands fa-r-project"></i> R package — <code>nos.tlplotR</code></h2>
+      <div class="pkg-head">
+        <div class="pkg-emblem r"><i class="fa-brands fa-r-project"></i></div>
+        <h2>R package: <code>nos.tlplotR</code></h2>
+      </div>
       <p>The official R interface to <code>nos-tlplot</code>, built with reticulate. Same figures, same themes,
-      same data format — straight from your R session or R Markdown document.
-      <a href="https://nos-tlplot.github.io/nos.tlplotR/" target="_blank">Full documentation</a>.</p>
+      same data format, straight from your R session or R Markdown document.
+      See the <a href="https://nos-tlplot.github.io/nos.tlplotR/" target="_blank">full documentation</a>.</p>
 
-      <div class="feature-card">
+      <div class="pkg-card">
         <h3>Install</h3>
         <pre><code>remotes::install_github("nos-tlplot/nos.tlplotR")</code></pre>
         <p>CRAN submission in progress.</p>
       </div>
 
-      <div class="feature-card">
+      <div class="pkg-card">
         <h3>Use in two lines</h3>
         <pre><code>library(nos.tlplotR)
 
 plot_nos_visualization("my_nos_data.csv", "nos_plot.png")</code></pre>
-        <p>Or everything at once — one call writes all thirteen figures:</p>
+        <p>Or everything at once. One call writes all thirteen figures:</p>
         <pre><code>files &lt;- plot_all("my_nos_data.csv", "nos.png")</code></pre>
       </div>
 
-      <p>
-        <a class="redirect-link" href="https://nos-tlplot.github.io/nos.tlplotR/" target="_blank"><i class="fa-solid fa-book"></i> package documentation</a> ·
-        <a class="redirect-link" href="https://github.com/nos-tlplot/nos.tlplotR" target="_blank"><i class="fa-brands fa-github"></i> package repository</a>
-      </p>
+      <div class="pkg-links">
+        <a href="https://nos-tlplot.github.io/nos.tlplotR/" target="_blank"><i class="fa-solid fa-book"></i> Package documentation</a>
+        <a href="https://github.com/nos-tlplot/nos.tlplotR" target="_blank"><i class="fa-brands fa-github"></i> Package repository</a>
+      </div>
     </section>
 
     <section class="section-header">
@@ -168,8 +174,11 @@ plot_nos_visualization("my_nos_data.csv", "nos_plot.png")</code></pre>
       0–9 stars, <a href="input-data.html">input data reference</a>) and render the identical
       <a href="visualization-types.html">thirteen visualizations</a> in the
       <code>traffic_light</code>, <code>gray</code>, <code>ocean</code> and <code>sage</code> themes.</p>
-      <img src="example/nos_plot.png" alt="NOS visualization plot generated by the nos-tlplot Python package and the nos.tlplotR R package" loading="lazy">
-      <p>Which one should you use? Pick the language your review workflow already lives in — the plots are
+      <figure class="plot-figure">
+        <img src="example/nos_plot.png" alt="NOS visualization plot generated by the nos-tlplot Python package and the nos.tlplotR R package" loading="lazy" width="3993" height="2704">
+        <figcaption>The traffic light plot from the sample dataset. Same file, either package.</figcaption>
+      </figure>
+      <p>Which one should you use? Pick the language your review workflow already lives in. The plots are
       guaranteed to match.</p>
     </section>
 
@@ -178,7 +187,7 @@ plot_nos_visualization("my_nos_data.csv", "nos_plot.png")</code></pre>
 <footer>
     <div class="footer-content">
       <div class="footer-left">
-        <p>© 2025–2026 Vihaan Sahu</p>
+        <p>© 2025 – 2026 Vihaan Sahu</p>
         <p>Apache 2.0 License</p>
       </div>
       <div class="footer-center">
