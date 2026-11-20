@@ -533,6 +533,7 @@
     .citation-download {
       margin-top: 1.5rem;
       display: flex;
+      flex-wrap: wrap;
       gap: 15px;
     }
     
@@ -545,6 +546,7 @@
       cursor: pointer;
       font-size: 0.9rem;
       font-weight: 500;
+      white-space: nowrap;
       transition: var(--transition);
       box-shadow: var(--shadow-sm);
     }
@@ -557,7 +559,7 @@
     
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
       gap: 25px;
       margin: 2.5rem 0;
     }
@@ -1012,7 +1014,7 @@
 
     .pkg-quick {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
       gap: 18px;
       margin-top: 1.5rem;
       text-align: left;
