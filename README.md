@@ -11,16 +11,17 @@ Open-source Python tool for visualising **Newcastle–Ottawa Scale (NOS) risk-of
 
 ## Quick start
 
-```bash
-pip install -r requirements.txt
+Run it in the browser at [nos-tlplot.streamlit.app](https://nos-tlplot.streamlit.app), or install the Python package from [PyPI](https://pypi.org/project/nos-tlplot/):
 
-# Streamlit web app
-streamlit run app.py
+```bash
+pip install nos-tlplot
 
 # Command line
-python3 nos_tlplot.py sample.csv output.png
-python3 nos_tlplot.py sample.csv output.png gray
+nos-tlplot sample.csv output.png
+nos-tlplot sample.csv output.png gray
 ```
+
+The Streamlit app and the full source live in the [main repository](https://github.com/aurumz-rgb/NOS-TLPlot).
 
 Upload a CSV/Excel NOS table (see [example/](example)), pick a plot type and theme, and export as `.png`, `.pdf`, `.svg`, or `.tiff`.
 
